@@ -1,0 +1,282 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Ross Basri">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Inspecty | Instant Quote</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'homepage/images/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'homepage/images/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'homepage/images/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'homepage/images/site.webmanifest' %}">
+
+    <meta name="theme-color" content="#563d7c">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .invoice-box {
+        max-width: 800px;
+        margin: auto;
+        padding: 30px;
+        border: 1px solid #eee;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: #555;
+        background-color: rgb(255,255,204);
+      }
+    
+      .invoice-box table {
+        width: 100%;
+        line-height: inherit;
+        text-align: left;
+      }
+    
+    .invoice-box table td {
+        padding: 5px;
+        vertical-align: top;
+    }
+    
+    .invoice-box table tr td:nth-child(2) {
+        text-align: right;
+    }
+    
+    .invoice-box table tr.top table td {
+        padding-bottom: 20px;
+    }
+    
+    .invoice-box table tr.top table td.title {
+        font-size: 45px;
+        line-height: 45px;
+        color: #333;
+    }
+    
+    .invoice-box table tr.information table td {
+        padding-bottom: 40px;
+    }
+    
+    .invoice-box table tr.heading td {
+        /*background: #eee;*/
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+    }
+    
+    .invoice-box table tr.details td {
+        padding-bottom: 20px;
+    }
+    
+    .invoice-box table tr.item td{
+        border-bottom: 1px solid #eee;
+    }
+    
+    .invoice-box table tr.item.last td {
+        border-bottom: none;
+    }
+    
+    .invoice-box table tr.total td:nth-child(2) {
+        border-top: 2px solid #eee;
+        font-weight: bold;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .invoice-box table tr.top table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        
+        .invoice-box table tr.information table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+    }
+    
+    /** RTL **/
+    .rtl {
+        direction: rtl;
+        font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    }
+    
+    .rtl table {
+        text-align: right;
+    }
+    
+    .rtl table tr td:nth-child(2) {
+        text-align: left;
+    }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="{% static 'rfq/css/style.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+   <header class="masthead mb-auto">
+    <div class="inner">
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" href="{% url 'homepage:index' %}">Home</a>
+        <a class="nav-link" href="/about">About</a>
+        <a class="nav-link active" href="/rfq">Quote</a>
+        <a class="nav-link" href="{% url 'contact:index' %}">Contact</a>
+      </nav>
+    </div>
+   </header>
+   <br><br><br>
+   <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="top">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <img src="{% static 'rfq/images/logo3.png' %}" style="width:100%; max-width:300px;">
+                            </td>
+                            
+                          <!--   <td>
+                                Invoice #: 123<br>
+                                Created: January 1, 2015<br>
+                                Due: February 1, 2015
+                            </td> -->
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr class="information">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td>
+                                Free Instant Quote<br>
+                                {{ quote.address }}<br>
+                                {{ quote.city }}, {{ quote.state }} {{ quote.zipcode }}
+                            </td>
+                            
+                            <td>
+                              
+                                Prepared for:<br>
+                                {{ quote.email }}
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr class="heading">
+                <td>
+                    Item
+                </td>
+                
+                <td>
+                    Price
+                </td>
+            </tr>
+            {% if 'base-inspect' in quote.options %}
+            <tr class="item">
+                <td>
+                    Base Inpsection Price
+                </td>
+                
+                <td>
+                    $XX
+                </td>
+            </tr>
+            {% endif %}
+            {% if 'radon' in quote.options %}
+            <tr class="item">
+                <td>
+                    Radon Test
+                </td>
+                
+                <td>
+                    $XX
+                </td>
+            </tr>
+            {% endif %}
+            {% if 'termite' in quote.options %}
+            <tr class="item">
+                <td>
+                    Termite Inspection
+                </td>
+                
+                <td>
+                    $XX
+                </td>
+            </tr>
+            {% endif %}
+            {% if 'mold' in quote.options %}
+            <tr class="item">
+                <td>
+                    Mold Screening
+                </td>
+                
+                <td>
+                    $XX
+                </td>
+            </tr>
+            {% endif %}
+            {% if 'well' in quote.options %}
+            <tr class="item">
+                <td>
+                    Well Flow Test
+                </td>
+                
+                <td>
+                    $XX
+                </td>
+            </tr>
+            {% endif %}
+            {% if 'pool' in quote.options %}
+            <tr class="item">
+                <td>
+                    Pool Inspection
+                </td>
+                
+                <td>
+                    $XX
+                </td>
+            </tr>
+            {% endif %}
+            
+            <tr class="total">
+                <td></td>
+                
+                <td>
+                   Total: ${{ quote.price }}
+                </td>
+            </tr>
+        </table> <br>
+        **Click below to unlock the itemized version and get an inspection scheduled with a member of our network.
+    </div> <br>
+    <a href="{% url 'rfq:record' quote.id %}" class="btn btn-lg btn-block btn-primary">Schedule Inspection</a>
+
+ <footer class="my-5 pt-5 text-muted text-center text-small">
+    <div class="inner">
+      <p class="mb-1"> &copy; RBCo 2020</p>
+    </div>
+ </footer>
+</div>
+</body>
+</html>

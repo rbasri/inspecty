@@ -1,0 +1,318 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Ross Basri">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Inspecty | Instant Quote</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'homepage/images/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'homepage/images/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'homepage/images/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'homepage/images/site.webmanifest' %}">
+
+    <meta name="theme-color" content="#563d7c">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .invoice-box {
+        max-width: 800px;
+        margin: auto;
+        padding: 30px;
+        border: 1px solid #eee;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: #555;
+      }
+    
+      .invoice-box table {
+        width: 100%;
+        line-height: inherit;
+        text-align: left;
+      }
+    
+    .invoice-box table td {
+        padding: 5px;
+        vertical-align: top;
+    }
+    
+    .invoice-box table tr td:nth-child(2) {
+        text-align: right;
+    }
+    
+    .invoice-box table tr.top table td {
+        padding-bottom: 20px;
+    }
+    
+    .invoice-box table tr.top table td.title {
+        font-size: 45px;
+        line-height: 45px;
+        color: #333;
+    }
+    
+    .invoice-box table tr.information table td {
+        padding-bottom: 40px;
+    }
+    
+    .invoice-box table tr.heading td {
+        background: #eee;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+    }
+    
+    .invoice-box table tr.details td {
+        padding-bottom: 20px;
+    }
+    
+    .invoice-box table tr.item td{
+        border-bottom: 1px solid #eee;
+    }
+    
+    .invoice-box table tr.item.last td {
+        border-bottom: none;
+    }
+    
+    .invoice-box table tr.total td:nth-child(2) {
+        border-top: 2px solid #eee;
+        font-weight: bold;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .invoice-box table tr.top table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        
+        .invoice-box table tr.information table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+    }
+    
+    /** RTL **/
+    .rtl {
+        direction: rtl;
+        font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    }
+    
+    .rtl table {
+        text-align: right;
+    }
+    
+    .rtl table tr td:nth-child(2) {
+        text-align: left;
+    }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="{% static 'rfq/css/style.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+   <header class="masthead mb-auto">
+    <div class="inner">
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" href="{% url 'homepage:index' %}">Home</a>
+        <a class="nav-link" href="/about">About</a>
+        <a class="nav-link active" href="/rfq">Quote</a>
+        <a class="nav-link" href="{% url 'contact:index' %}">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+<!--     <div class="py-5 text-center">
+      <a href="{% url 'homepage:index' %}">
+      <img class= "d-block mx-auto mb-4" src="{% static 'rfq/images/logo3.png' %}" alt="" width="380" height="105">
+      </a>
+      <h2>Instant Quote for {{ quote.address }}</h2>
+
+    </div> -->
+
+<!-- <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+</div> -->
+
+<!-- <div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Basic</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">${{ quote.price }}</h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>-Schedule at your convenience</li>
+          <li>-NACHI certified inspectors</li>
+          <li>-Help center and support</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary">Choose Basic</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Advanced</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$500</h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>-Basic inspection</li>
+          <li>-Radon inspection</li>
+          <br>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary">Choose Advanced</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Complete</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$700</h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>-Basic Inspection</li>
+          <li>-Radon inspection</li>
+          <li>-Feature 3</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary">Choose Complete</button>
+      </div>
+    </div>
+  </div> -->
+<div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="top">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <img src="https://www.sparksuite.com/images/logo.png" style="width:100%; max-width:300px;">
+                            </td>
+                            
+                            <td>
+                                Invoice #: 123<br>
+                                Created: January 1, 2015<br>
+                                Due: February 1, 2015
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr class="information">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td>
+                                Sparksuite, Inc.<br>
+                                12345 Sunny Road<br>
+                                Sunnyville, CA 12345
+                            </td>
+                            
+                            <td>
+                                Acme Corp.<br>
+                                John Doe<br>
+                                john@example.com
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr class="heading">
+                <td>
+                    Payment Method
+                </td>
+                
+                <td>
+                    Check #
+                </td>
+            </tr>
+            
+            <tr class="details">
+                <td>
+                    Check
+                </td>
+                
+                <td>
+                    1000
+                </td>
+            </tr>
+            
+            <tr class="heading">
+                <td>
+                    Item
+                </td>
+                
+                <td>
+                    Price
+                </td>
+            </tr>
+            
+            <tr class="item">
+                <td>
+                    Website design
+                </td>
+                
+                <td>
+                    $300.00
+                </td>
+            </tr>
+            
+            <tr class="item">
+                <td>
+                    Hosting (3 months)
+                </td>
+                
+                <td>
+                    $75.00
+                </td>
+            </tr>
+            
+            <tr class="item last">
+                <td>
+                    Domain name (1 year)
+                </td>
+                
+                <td>
+                    $10.00
+                </td>
+            </tr>
+            
+            <tr class="total">
+                <td></td>
+                
+                <td>
+                   Total: $385.00
+                </td>
+            </tr>
+        </table>
+    </div>
+ <footer class="my-5 pt-5 text-muted text-center text-small">
+    <div class="inner">
+      <p class="mb-1"> &copy; RBCo 2020</p>
+    </div>
+ </footer>
+</div>
+</body>
+</html>
