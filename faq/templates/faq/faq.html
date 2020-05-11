@@ -1,0 +1,185 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Answers to all your questions about home inspection quotes, costs, and process.">
+    <meta name="author" content="RB Companies, LLC">
+    <title>Inspecty - FAQ </title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <meta name="theme-color" content="#563d7c">
+      <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'homepage/images/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'homepage/images/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'homepage/images/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'homepage/images/site.webmanifest' %}">
+
+  	<link rel="stylesheet" href="{% static 'faq/css/faqstyles.css' %}">
+
+  </head>
+  <body class="bg-light">
+    <div class="container">
+
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="/rfq">Quote</a>
+            <a class="nav-link" href="/contact">Contact</a>
+            <a class="nav-link active" href="/faq">FAQ</a>
+
+          </nav>
+        </div>
+      </header>
+      <div class="py-5 text-center">
+      	<a href="{% url 'homepage:index' %}">
+      	<img class= "d-block mx-auto mb-4" src="{% static 'homepage/images/logo_homes.png' %}" alt="" width="291" height="170">
+      	</a>
+      </div>
+
+      <h3 class="up"> For home buyers and sellers: </h3> 
+      <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <div class="left">What is a home inspection and do I really need one?</div>
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+           Before closing, it's recommended that a home buyer purchases an inspection from a certified home inspector. The inspection should last a couple hours, and at the end you will receive a written report documenting any potential issues with the property. Specifically, the inspector will be on the lookout for things that could present necessary fixes in the future, both in the short and longer terms.<br><br>
+           Ultimately, a home is one of the most significant personal purchases you can make, so the cost of an inspection is well worth protecting your investment. Additionally, if the inspector does find issues with the home, it can be used to negotiate your closing price and save you money.
+
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <div class="left">What does Inspecty do and why should I use it?</div>
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            Inspecty provides a free and instant quote for your home inspection any time of day. We save you the tedious task of working through a list of local home inspectors and calling each to ask for pricing. If you decide to book with us, lose your fear of overpaying for an inspection, as we automatically check multiple inspectors in your area for best pricing before you book, and return that savings right to you.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <div class="left"> Who are your inspectors? </div>
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body">
+            All of our inspectors are certified by national and local organizations to perform a quality home inspection for your property. In some jurisdictions, inspectors require additional licensing to operate, but we check this ahead of time so you don't have to. And, just in case our partners do miss something, they are at least partially insured against errors and omissions.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <div class="left"> What are the extras and options available in the quote? </div>
+            </button>
+          </h2>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+          <div class="card-body">
+            The base inspection will cover the majority of what you need to close on a home. As part of the base price, the inspector will check the exterior, interior, property grounds, driveway, roof, garage, crawl space, plumbing, and electricity for anything that may present an issue now or in the future.<br><br>
+            While not required, we recommend add-ons to protect the investment in your home and guarantee a safe living space. Mold and radon, for example, can both present hazards to the occupant and lower the fair market value of the home if their presence is detected. Likewise, termites can be tremendously destructive to a home, and present significant costs if you unknowingly purchase a home with an infestation. <br><br>
+            Finally, well flow testing and pool inspections are also available as simple and convenient ways to make sure you are really buying your perfect home.
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h3> For inspectors: </h3>
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                <div class="left">Why join inspecty homes as a partner?</div>
+              </button>
+            </h2>
+          </div>
+
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+            <div class="card-body">
+              To get more business! We offer you a channel to complement your existing customer acquisition efforts. Get new clients in your area and expand your network accordingly.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingSix">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                <div class="left">What if I don't like your price?</div>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+            <div class="card-body">
+              No problem. You're never committed to perform a home inspection at a price you don't like.              
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingSeven">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                <div class="left"> What does it cost? </div>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+            <div class="card-body">
+              Nothing. By joining our network as a partner, you get free access to our customer channel and the option to participate in the business we send if it suits your schedule.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingEight">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                <div class="left"> How do I join your network? </div>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+            <div class="card-body">
+              Click <a href="/onboard"> here. </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">&copy; 2020 RBCo</p>
+    </footer>
+  </div>
+
+  <!-- 
+  Insert bootstraps JS dependencies -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
