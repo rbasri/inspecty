@@ -46,3 +46,13 @@
   margin-left: 2%;
 }
 
+.up {
+  position: relative;
+  margin-top: -2rem;
+}
+
+.left{
+  text-align: left;
+  margin-left: 1rem;
+  margin-top: -2rem;
+}

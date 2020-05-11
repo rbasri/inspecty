@@ -44,3 +44,14 @@
 .btn {
   margin-left: 1rem;
 }
+
+.up {
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.left{
+  text-align: left;
+  margin-left: 1rem;
+  margin-top: -5rem;
+}

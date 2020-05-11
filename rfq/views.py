@@ -47,9 +47,19 @@ def quoted(request):
 			'quote': quote,
 		})
 
-def record(request, quote_id):
-	#send_mail('New request to schedule inspection')
+def record(request):
+	try:
+		quote_id = request.POST['quote_id']
+
+	except KeyError:
+		return render(request, 'rfq/quotepage.html')
+
 	quote = get_object_or_404(Quote, pk=quote_id)
+	# now = timezone.now()
+	# diff = now-quote.timestamp
+	# if diff > 0:
+	# 	return render(request, 'rfq/quotepage.html')
+	#send_mail('New request to schedule inspection', 'Quote ID = ' + str(quote_id), EMAIL_HOST_USER, [EMAIL_HOST_USER])
 	quote.scheduled=True
 	quote.save()
 	return render(request, 'rfq/record.html')

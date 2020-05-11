@@ -46,5 +46,7 @@ class Quote(models.Model):
 			quoted_price += cost_mold
 		if 'well' in self.options:
 			quoted_price += cost_well
+		if 'pool' in self.options:
+			quoted_price += cost_pool
 
 		self.price = int(quoted_price)

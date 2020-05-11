@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Ross Basri">
-    <meta name="generator" content="Jekyll v3.8.6">
+    <meta name="author" content="RB Companies, LLC">
     <title>Inspecty | Instant Quote</title>
 
     <!-- Bootstrap core CSS -->
@@ -136,10 +135,12 @@
    <header class="masthead mb-auto">
     <div class="inner">
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link" href="{% url 'homepage:index' %}">Home</a>
+        <a class="nav-link" href="/">Home</a>
         <a class="nav-link" href="/about">About</a>
         <a class="nav-link active" href="/rfq">Quote</a>
-        <a class="nav-link" href="{% url 'contact:index' %}">Contact</a>
+        <a class="nav-link" href="/contact">Contact</a>
+        <a class="nav-link" href="/faq">FAQ</a>
+
       </nav>
     </div>
    </header>
@@ -270,7 +271,13 @@
         </table> <br>
         **Click below to unlock the itemized version and get an inspection scheduled with a member of our network.
     </div> <br>
-    <a href="{% url 'rfq:record' quote.id %}" class="btn btn-lg btn-block btn-primary">Schedule Inspection</a>
+
+    <form method="post" action="{% url 'rfq:record' %}">
+        {% csrf_token %}
+        <input type="hidden" name="quote_id" value="{{ quote.id }}"/> 
+        <!-- <a onclick="this.parentNode.submit();">click here</a> -->
+        <button class="btn btn-lg btn-block btn-primary" type="submit">Schedule Inspection</button>
+    </form>
 
  <footer class="my-5 pt-5 text-muted text-center text-small">
     <div class="inner">

@@ -5,9 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Ross Basri">
-    <meta name="generator" content="Jekyll v3.8.6">
-    <title>Inspecty | Quote</title>
+    <meta name="author" content="RB Companies, LLC">
+    <title>Inspecty - Free and Instant Home Inspection Quote</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -28,10 +27,12 @@
     <header class="masthead mb-auto">
       <div class="inner">
         <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link" href="{% url 'homepage:index' %}">Home</a>
+          <a class="nav-link" href="/">Home</a>
           <a class="nav-link" href="/about">About</a>
           <a class="nav-link active" href="/rfq">Quote</a>
           <a class="nav-link" href="/contact">Contact</a>
+          <a class="nav-link" href="/faq">FAQ</a>
+
 
         </nav>
       </div>
@@ -39,7 +40,7 @@
 
   <div class="py-5 text-center">
 	<a href="{% url 'homepage:index' %}">
-	<img class= "d-block mx-auto mb-4" src="{% static 'contact/images/logo3.png' %}" width="380" height="105">
+	<img class= "d-block mx-auto mb-4" src="{% static 'homepage/images/logo_homes.png' %}" width="291" height="170">
 	</a>
     <h5>We're still in beta, but thanks very much for your interest. We'll let you know when we can complete your request.<h5>
   </div> 

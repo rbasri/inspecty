@@ -32,6 +32,8 @@
         <a class="nav-link" href="/about">About</a>
         <a class="nav-link" href="/rfq">Quote</a>
         <a class="nav-link active" href="/contact">Contact</a>
+        <a class="nav-link" href="/faq">FAQ</a>
+
 
       </nav>
     </div>
@@ -39,13 +41,13 @@
 
   <div class="py-5 text-center">
 	<a href="{% url 'homepage:index' %}">
-	<img class= "d-block mx-auto mb-4" src="{% static 'contact/images/logo3.png' %}" width="380" height="105">
+	<img class= "d-block mx-auto mb-4" src="{% static 'homepage/images/logo_homes.png' %}" width="291" height="170">
 	</a>
-    <h5>Thanks for your interest. Leave a note below and we'll reach out shortly.<h5>
   </div> 
+  <h5 class="left"> Send us a message, we'd love to hear from you.</h5>
   
   <!-- Start Form  -->
-  <div class="col-md-8 order-md-1">
+  <div class="col-md-8 order-md-1 up">
       <form action="{% url 'contact:send_contact' %}" method="post" class="needs-validation" novalidate>
       {% csrf_token %}
 
