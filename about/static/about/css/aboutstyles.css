@@ -109,3 +109,41 @@ img {
 p {
   text-align: center;
 }
+
+@keyframes appear {
+  0% { opacity: 0; }
+  25% { opacity: 100; }
+  100% { opacity: 100; }
+}
+
+@keyframes appear_two {
+  0% { opacity: 0; }
+  25% { opacity: 0; }
+  50% { opacity: 100; }
+  100% { opacity: 100; }
+}
+
+@keyframes appear_three {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  75% { opacity: 100; }
+  100% { opacity: 100; }
+}
+
+.animate {
+  animation-name: appear;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+
+.animate_two {
+  animation-name: appear_two;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+
+.animate_three {
+  animation-name: appear_three;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}

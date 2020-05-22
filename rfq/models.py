@@ -21,23 +21,25 @@ class Quote(models.Model):
 		return self.email + ' | ' + str(self.timestamp)
 
 	# Define regression for getting quote price
-	def getPrice(self):
+	def getPrice(self, sqft=0, year_built=0, home_value=0, unit_type=''):
 
-		#Dummy variables
-		sqft = 1500.0
-		age = 30
+		age = 2020-year_built
 		quoted_price = 0
 
-		cost_sqfoot = 450 + max(0,(sqft-3000)*0.1)
+		cost_sqfoot = 400 + max(0,(sqft-3000)*0.1)
 		cost_radon = 150
 		cost_termite = 100
 		cost_mold = 425
 		cost_well = 100
 		cost_pool = 150
 		cost_age = age*0.5
+		cost_value = home_value / 8000.0
 
 		if 'base-inspect' in self.options:
-			quoted_price += cost_sqfoot
+			if 'APT' in str(unit_type):
+				quoted_price += 250
+			else:
+				quoted_price += cost_sqfoot
 		if 'radon' in self.options:
 			quoted_price += cost_radon
 		if 'termite' in self.options:
@@ -48,5 +50,7 @@ class Quote(models.Model):
 			quoted_price += cost_well
 		if 'pool' in self.options:
 			quoted_price += cost_pool
+
+		quoted_price += cost_age + cost_value
 
 		self.price = int(quoted_price)

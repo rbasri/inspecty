@@ -26,11 +26,11 @@
     <header class="masthead mb-auto">
       <div class="inner">
         <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link" href="{% url 'homepage:index' %}">Home</a>                
-          <a class="nav-link active" href="/about">About</a>
+          <a class="nav-link" href="/">Home</a>
           <a class="nav-link" href="/rfq">Quote</a>
-          <a class="nav-link" href="/contact">Contact</a>
+          <a class="nav-link active" href="/about">About</a>
           <a class="nav-link" href="/faq">FAQ</a>
+          <a class="nav-link" href="/blog">Blog</a>
 
         </nav>
       </div>
@@ -62,7 +62,7 @@
         <div class="col-md-4">
           <div class="boxbackground">
             <h2 class="col-center">3. Get Inspected</h2>
-            <p>We'll match your quote with a member of our inspector network.</p> 
+            <p>We'll match your job with a certified inspector in your area.</p> 
           </div><br>
           <img src="{% static 'about/images/mglass.png' %}" width="180" height="180">
         </div>
@@ -72,11 +72,11 @@
         <div class="my-list-container">
           <h1 class="title-center"> <br>The Inspecty Advantage </h1><br>
           <div>
-            <h5> &#10004; Save time by letting us match you with a qualified home inspector in your area. </h5>
-            <h5>&emsp;&emsp; &middot; We know what to look for, so you don't have to learn on the fly.</h5><br>
-            <h5> &#10004; Don't overpay for a home inspection. <br>
-            &emsp;&emsp; &middot; Let us quote multiple inspectors to ensure you get the best deal possible.</h5><br>
-            <h5> &#10004; Gain transparency in understanding the cost of your home inspection. <br>
+            <h5 class="animate"> &#10004; Save time by letting us match you with a qualified home inspector in your area. <br>
+            &emsp;&emsp; &middot; We know what to look for, so you don't have to learn on the fly.</h5><br>
+            <h5 class="animate_two"> &#10004; Don't overpay for a home inspection. <br>
+            &emsp;&emsp; &middot; We'll shop your job to multiple inspectors to ensure you get the best deal possible.</h5><br>
+            <h5 class="animate_three"> &#10004; Gain transparency in understanding the cost of your home inspection. <br>
             &emsp;&emsp; &middot; We'll show you the fair market rate for each additional option you choose.</h5><br>
           </div>
         </div>
@@ -87,8 +87,8 @@
 <footer class="my-5 pt-5 text-muted text-center text-small">
   <p class="mb-1">&copy; 2020 RBCo</p>
 </footer>
-Insert bootstraps JS dependencies -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<!-- Insert bootstraps JS dependencies -->
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>

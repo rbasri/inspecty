@@ -5,9 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Ross Basri">
-    <meta name="generator" content="Jekyll v3.8.6">
-    <title>Inspecty | Contact</title>
+    <meta name="author" content="RB Companies, LLC">
+    <title>Inspecty - Free and Instant Home Inspection Quote</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -29,10 +28,11 @@
       <div class="inner">
         <nav class="nav nav-masthead justify-content-center">
           <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/rfq">Quote</a>
+          <a class="nav-link active" href="/rfq">Quote</a>
           <a class="nav-link" href="/about">About</a>
           <a class="nav-link" href="/faq">FAQ</a>
           <a class="nav-link" href="/blog">Blog</a>
+
 
         </nav>
       </div>
@@ -40,12 +40,12 @@
 
   <div class="py-5 text-center">
 	<a href="{% url 'homepage:index' %}">
-	<img class= "d-block mx-auto mb-4" src="{% static 'homepage/images/logo_homes.png' %}" width="324" height="189">
+	<img class= "d-block mx-auto mb-4" src="{% static 'homepage/images/logo_homes.png' %}" width="291" height="170">
 	</a>
-    <h5>Your message has been sent successfully! We'll get right back to you.<h3>
+    <h5>{{ error }}<h5>
   </div> 
   
-
+<br><br><br><br><br><br>
   <footer class="my-5 pt-5 text-muted text-center text-small">
     <p class="mb-1">&copy; 2020 RBCo</p>
   </footer>

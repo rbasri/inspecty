@@ -135,11 +135,11 @@
    <header class="masthead mb-auto">
     <div class="inner">
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link" href="/">Home</a>
-        <a class="nav-link" href="/about">About</a>
-        <a class="nav-link active" href="/rfq">Quote</a>
-        <a class="nav-link" href="/contact">Contact</a>
-        <a class="nav-link" href="/faq">FAQ</a>
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link active" href="/rfq">Quote</a>
+          <a class="nav-link" href="/about">About</a>
+          <a class="nav-link" href="/faq">FAQ</a>
+          <a class="nav-link" href="/blog">Blog</a>
 
       </nav>
     </div>
@@ -154,12 +154,6 @@
                             <td class="title">
                                 <img src="{% static 'rfq/images/logo3.png' %}" style="width:100%; max-width:300px;">
                             </td>
-                            
-                          <!--   <td>
-                                Invoice #: 123<br>
-                                Created: January 1, 2015<br>
-                                Due: February 1, 2015
-                            </td> -->
                         </tr>
                     </table>
                 </td>
@@ -269,13 +263,12 @@
                 </td>
             </tr>
         </table> <br>
-        **Click below to unlock the itemized version and get an inspection scheduled with a member of our network.
+        **Click below to unlock an itemized version (if you selected extras) and get an inspection scheduled with a certified inspector near you.
     </div> <br>
 
     <form method="post" action="{% url 'rfq:record' %}">
         {% csrf_token %}
         <input type="hidden" name="quote_id" value="{{ quote.id }}"/> 
-        <!-- <a onclick="this.parentNode.submit();">click here</a> -->
         <button class="btn btn-lg btn-block btn-primary" type="submit">Schedule Inspection</button>
     </form>
 

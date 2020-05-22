@@ -3,6 +3,7 @@ from .models import Quote
 from django.utils import timezone
 from django.core.mail import send_mail
 from mysite.settings import EMAIL_HOST_USER
+import requests
 
 # Create your views here.
 def index(request):
@@ -28,37 +29,53 @@ def quoted(request):
 	except KeyError:
 		return render(request, 'rfq/quotepage.html')
 
-	else:
-		quote = Quote(address=address, 
-					  city=city, 
-					  state=state, 
-					  zipcode=zipcode,
-					  email=email, 
-					  timestamp=timestamp,
-					  options=quote_options)
+	quote = Quote(address=address, 
+				  city=city, 
+				  state=state, 
+				  zipcode=zipcode,
+				  email=email, 
+				  timestamp=timestamp,
+				  options=quote_options)
 
-		#Update this, get square feet and zestimate from zillow
+	# endpoint = 'https://sandbox.estated.com/v4/property?' #sandbox
+	endpoint = 'https://apis.estated.com/v4/property?' #production
+	# token = 'HrKD9Ef6Rot4Yb9rxeDAfZdWKCiofs' #sandbox
+	token = 'WoflkXOZCHzq7g2j77y2W9B8UrGCXh' #production
+	endpoint += 'token=' + token + '&combined_address='
 
-		quote.getPrice()
-		quote.save()
-		#send_mail('New quote from ' + email, str(quote), EMAIL_HOST_USER, [EMAIL_HOST_USER])
 
-		return render(request, 'rfq/quoted.html', {
-			'quote': quote,
-		})
+	endpoint += address + ', ' + city + ', ' + state + ' ' + zipcode
+
+	response = requests.get(endpoint)
+	
+	try:
+		yr_built = response.json()['data']['structure']['year_built']
+		sqft = response.json()['data']['structure']['total_area_sq_ft']
+		home_value = response.json()['data']['valuation']['value']
+		unit_type = response.json()['data']['address']['unit_type']
+
+	except TypeError:
+		error_message = "Sorry, we couldn't find that property. Try quoting again."
+		return render(request, 'rfq/error.html', {'error' : error_message,})
+	
+	quote.getPrice(sqft=sqft, year_built=yr_built, home_value=home_value, unit_type=unit_type)
+	quote.save()
+	#send_mail('New quote from ' + email, str(quote), EMAIL_HOST_USER, [EMAIL_HOST_USER])
+
+	return render(request, 'rfq/quoted.html', {
+		'quote': quote,
+	})
 
 def record(request):
 	try:
 		quote_id = request.POST['quote_id']
 
 	except KeyError:
-		return render(request, 'rfq/quotepage.html')
+		error_message = "Sorry, something went wrong in trying to schedule that quote. Please try again."
+		return render(request, 'rfq/error.html', {'error' : error_message})
 
 	quote = get_object_or_404(Quote, pk=quote_id)
-	# now = timezone.now()
-	# diff = now-quote.timestamp
-	# if diff > 0:
-	# 	return render(request, 'rfq/quotepage.html')
+
 	#send_mail('New request to schedule inspection', 'Quote ID = ' + str(quote_id), EMAIL_HOST_USER, [EMAIL_HOST_USER])
 	quote.scheduled=True
 	quote.save()
