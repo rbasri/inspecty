@@ -21,7 +21,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   
   <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="{% static 'blog/css/bloghomestyles.css' %}">
+  <link rel="stylesheet" href="{% static 'blog/css/bloghomestyles.css' %}" media="screen and (min-device-width: 600px)">
+  <link rel="stylesheet" href="{% static 'blog/css/bloghomestylesmobile.css' %}" media="screen and (max-device-width: 600px)">
 
 </head>
 
@@ -39,8 +40,8 @@
       </nav>
     </div>
     <h3 class="masthead-brand">
-      <img src="{% static '/homepage/images/logo_homes.png' %}" width="291" height="170">
-    </h3>
+      <img class="logopic" src="{% static '/homepage/images/logo_homes.png' %}" width="291" height="170">
+    </h3> 
   </header>
 
   <!-- Page Content -->

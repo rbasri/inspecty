@@ -16,7 +16,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'homepage/images/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'homepage/images/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'homepage/images/site.webmanifest' %}">
-    <link rel="stylesheet" href="{% static 'about/css/aboutstyles.css' %}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'about/css/aboutstyles.css' %}" media="screen and (min-device-width: 600px)">
+    <link rel="stylesheet" href="{% static 'about/css/aboutstylesmobile.css' %}" media="screen and (max-device-width: 600px)">
 
     <meta name="theme-color" content="#563d7c">
 
@@ -72,11 +75,11 @@
         <div class="my-list-container">
           <h1 class="title-center"> <br>The Inspecty Advantage </h1><br>
           <div>
-            <h5 class="animate"> &#10004; Save time by letting us match you with a qualified home inspector in your area. <br>
+            <h5 class="animate list-font"> &#10004; Save time by letting us match you with a qualified home inspector in your area. <br>
             &emsp;&emsp; &middot; We know what to look for, so you don't have to learn on the fly.</h5><br>
-            <h5 class="animate_two"> &#10004; Don't overpay for a home inspection. <br>
+            <h5 class="animate_two list-font"> &#10004; Don't overpay for a home inspection. <br>
             &emsp;&emsp; &middot; We'll shop your job to multiple inspectors to ensure you get the best deal possible.</h5><br>
-            <h5 class="animate_three"> &#10004; Gain transparency in understanding the cost of your home inspection. <br>
+            <h5 class="animate_three list-font"> &#10004; Gain transparency in understanding the cost of your home inspection. <br>
             &emsp;&emsp; &middot; We'll show you the fair market rate for each additional option you choose.</h5><br>
           </div>
         </div>

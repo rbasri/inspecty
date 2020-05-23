@@ -21,7 +21,9 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="{% static 'homepage/css/homestyles.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'homepage/css/homestyles.css' %}" media="screen and (min-device-width: 600px)">
+    <link rel="stylesheet" href="{% static 'homepage/css/homestylesmobile.css' %}" media="screen and (max-device-width: 600px)">
 
     <meta name="theme-color" content="#563d7c">
 
@@ -30,18 +32,17 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
-      <h3 class="masthead-brand">
-        <img src="{% static '/homepage/images/logo_homes.png' %}" width="291" height="170">
-      </h3>
+
       <nav class="nav nav-masthead justify-content-center justify-right">
         <a class="nav-link active" href="/">Home</a>
         <a class="nav-link" href="/rfq">Quote</a>
         <a class="nav-link" href="/about">About</a>
         <a class="nav-link" href="/faq">FAQ</a>
         <a class="nav-link" href="/blog">Blog</a>
-
-
       </nav>
+      <h3 class="masthead-brand">
+        <img src="{% static '/homepage/images/logo_homes.png' %}" width="291" height="170">
+      </h3>
     </div>
   </header>
 

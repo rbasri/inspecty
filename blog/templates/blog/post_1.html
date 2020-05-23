@@ -21,7 +21,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   
   <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="{% static 'blog/css/bloghomestyles.css' %}">
+  <link rel="stylesheet" href="{% static 'blog/css/bloghomestyles.css' %}" media="screen and (min-device-width: 600px)">
+  <link rel="stylesheet" href="{% static 'blog/css/bloghomestylesmobile.css' %}" media="screen and (max-device-width: 600px)">
 
 </head>
 
@@ -44,50 +45,44 @@
   </header>
 
   <!-- Page Content -->
-  <div class="container">
-
+  <div class="container move_up">
+    <!-- Post Content Column -->
     <div class="">
 
-      <!-- Post Content Column -->
-      <div class="">
+      <!-- Title -->
+      <h1 class="mt-4">Home Inspections Made Easy</h1>
 
-        <!-- Title -->
-        <h1 class="mt-4">Home Inspections Made Easy</h1>
+      <hr>
 
-        <hr>
+      <!-- Date/Time -->
+      <p>Posted on May 20, 2020 at 8:59 PM</p>
 
-        <!-- Date/Time -->
-        <p>Posted on May 20, 2020 at 8:59 PM</p>
+      <hr>
 
-        <hr>
+      <!-- Preview Image -->
+      <img class="img-fluid rounded" src="{% static '/blog/images/inspectionpic.png' %}" alt="" width="600" >
 
-        <!-- Preview Image -->
-        <img class="img-fluid rounded" src="{% static '/blog/images/inspectionpic.png' %}" alt="" width="600" >
+      <hr>
 
-        <hr>
+      <!-- Post Content -->
+      <p class="lead">Buying a home can be scary. For many Americans, a home represents the most significant investment they will make in their lifetimes. Unfortunately, many problems can lie beneath the surface of your dream abode, hidden from the untrained eye. Radon, termites, and mold, oh my! </p>
 
-        <!-- Post Content -->
-        <p class="lead">Buying a home can be scary. For many Americans, a home represents the most significant investment they will make in their lifetimes. Unfortunately, many problems can lie beneath the surface of your dream abode, hidden from the untrained eye. Radon, termites, and mold, oh my! </p>
+      <p>This is why nearly three quarters of Americans choose to purchase a home inspection prior to closing. During the inspection, a trained professional examines every nook and cranny in your home for issues that could require fixes. Should any issues be found, it would most likely have a material impact on the fair value of the home, and could ultimately save a buyer from overpaying. </p>
 
-        <p>This is why nearly three quarters of Americans choose to purchase a home inspection prior to closing. During the inspection, a trained professional examines every nook and cranny in your home for issues that could require fixes. Should any issues be found, it would most likely have a material impact on the fair value of the home, and could ultimately save a buyer from overpaying. </p>
-
-        <p>So, home inspections are a great thing! Unfortunately, they're not so easy to set up. What credentials should you look for? Who in your area has those credentials? How much should you pay for an inspection? Finding the answers to these questions could take some time. One option is to google a list of inspectors in your area and call them to hear their pitch and receive a quote. Another option is to accept a recommendation from your realtor, but these are occassionally based on relationships rather than quality of service or price. Fortunately, Inspecty Homes offers a better way.</p>
+      <p>So, home inspections are a great thing! Unfortunately, they're not so easy to set up. What credentials should you look for? Who in your area has those credentials? How much should you pay for an inspection? Finding the answers to these questions could take some time. One option is to google a list of inspectors in your area and call them to hear their pitch and receive a quote. Another option is to accept a recommendation from your realtor, but these are occassionally based on relationships rather than quality of service or price. Fortunately, Inspecty Homes offers a better way.</p>
 
 <!--         <blockquote class="blockquote">
-          <p class="mb-0">"What credentials should you look for? Who in your area has those credentials? How much should you pay for an inspection?"</p>
-          <footer class="blockquote-footer">Someone famous in
-            <cite title="Source Title">Source Title</cite>
-          </footer>
-        </blockquote> -->
+        <p class="mb-0">"What credentials should you look for? Who in your area has those credentials? How much should you pay for an inspection?"</p>
+        <footer class="blockquote-footer">Someone famous in
+          <cite title="Source Title">Source Title</cite>
+        </footer>
+      </blockquote> -->
 
-        <p> By using our free and instant quoting tool, Inspecty Homes provides you with a fair and objective estimate of what you should pay for an inspection specific to your exact home. Receive a quote for your next home inspection whenever it suits you, any time of day or week, and ditch the unnecessary string of phone calls restricted to business hours. If you want to go ahead and book an inspection at the quote price you receive, you can do so with just one more click.</p>
+      <p> By using our free and instant quoting tool, Inspecty Homes provides you with a fair and objective estimate of what you should pay for an inspection specific to your exact home. Receive a quote for your next home inspection whenever it suits you, any time of day or week, and ditch the unnecessary string of phone calls restricted to business hours. If you want to go ahead and book an inspection at the quote price you receive, you can do so with just one more click.</p>
 
-        <p>All you have to do to get started with a free quote is <a href="/rfq">click here </a>. What are you waiting for?!</p>
-        <hr>
-      </div>
-
+      <p>All you have to do to get started with a free quote is <a href="/rfq">click here </a>. What are you waiting for?!</p>
+      <hr>
     </div>
-    <!-- /.row -->
 
   </div>
   <!-- /.container -->
