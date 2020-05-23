@@ -33,7 +33,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: lightslategrey;
+  background-color: lightslategray;
 }
 
 body {
@@ -108,7 +108,6 @@ body {
 
 .cover-heading {
   font-size: 26px;
-  /*max-width: 500px;*/
 }
 
 .lead {
@@ -125,12 +124,14 @@ body {
 .bottom {
   position: absolute;
   bottom: 1rem;
-  left: 10rem;
+  left: 1rem;
+  font-size: 14px;
 }
 
 .bottom2 {
   position: absolute;
-  bottom: 1rem;
-  left: 18rem;
+  bottom: 2rem;
+  left: 1rem;
+  font-size: 14px;
 }
 

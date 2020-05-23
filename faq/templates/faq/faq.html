@@ -17,7 +17,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'homepage/images/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'homepage/images/site.webmanifest' %}">
 
-  	<link rel="stylesheet" href="{% static 'faq/css/faqstyles.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'faq/css/faqstyles.css' %}" media="screen and (min-device-width: 600px)">
+    <link rel="stylesheet" href="{% static 'faq/css/faqstylesmobile.css' %}" media="screen and (max-device-width: 600px)">
 
   </head>
   <body class="bg-light">
@@ -37,7 +39,7 @@
       </header>
       <div class="py-5 text-center">
       	<a href="{% url 'homepage:index' %}">
-      	<img class= "d-block mx-auto mb-4" src="{% static 'homepage/images/logo_homes.png' %}" alt="" width="291" height="170">
+      	<img class= "d-block mx-auto mb-4 pic-up" src="{% static 'homepage/images/logo_homes.png' %}" alt="" width="291" height="170">
       	</a>
       </div>
 
@@ -106,7 +108,7 @@
       </div>
     </div>
     <br>
-    <h3> For inspectors: </h3>
+    <h3 style="font-size: 22px;"> For inspectors: </h3>
       <div class="accordion" id="accordionExample">
         <div class="card">
           <div class="card-header" id="headingFive">
