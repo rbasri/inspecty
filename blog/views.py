@@ -7,3 +7,6 @@ def index(request):
 
 def post_1(request):
 	return render(request, 'blog/post_1.html')
+
+def post_2(request):
+	return render(request, 'blog/post_2.html')

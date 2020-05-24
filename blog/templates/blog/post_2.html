@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Inspecty Homes, learn more about home inspections and how we can help.">
+  <meta name="author" content="RB Companies LLC">
+
+  <title>Inspecty Homes Blog - Home Inspections Made Easy</title>
+
+    <!--Favicons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'homepage/images/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'homepage/images/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'homepage/images/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'homepage/images/site.webmanifest' %}">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="{% static 'blog/css/blogpost2styles.css' %}" media="screen and (min-device-width: 600px)">
+  <link rel="stylesheet" href="{% static 'blog/css/bloghomestylesmobile.css' %}" media="screen and (max-device-width: 600px)">
+
+</head>
+
+<body>
+
+  <header class="masthead mb-auto">
+    <div class="container">
+
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/rfq">Quote</a>
+        <a class="nav-link" href="/about">About</a>
+        <a class="nav-link" href="/faq">FAQ</a>
+        <a class="nav-link active" href="/blog">Blog</a>
+      </nav>
+    </div>
+    <h3 class="masthead-brand">
+      <img src="{% static '/homepage/images/logo_homes.png' %}" width="291" height="170">
+    </h3>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container move_up">
+    <!-- Post Content Column -->
+    <div class="">
+
+      <!-- Title -->
+      <h1 class="mt-4">Pandemic Housing Update - Pain Still to Come</h1>
+
+      <hr>
+
+      <!-- Date/Time -->
+      <p>Posted on May 24, 2020 at 4:07 PM</p>
+
+      <hr>
+
+      <!-- Preview Image -->
+      <img class="img-fluid rounded" src="{% static '/blog/images/foreclosure_pic.jpg' %}" alt="" width="600" >
+
+      <hr>
+      <p class="lead"> <i>The pain of the Covid-19 pandemic is probably still ahead of us as far as the US housing market is concerned. </i></p>
+      <p>Just over two months into the arrival of the pandemic in the United States, the economy is in shambles. Since the start of shelter-in-place orders, about 39 million Americans have <a href="https://www.theguardian.com/business/2020/may/21/us-unemployment-figures-jobs-lost-coronavirus">lost their jobs</a>, and even more find themselves in precarious work situations. In terms of output, the CBO <a href="https://www.cbo.gov/publication/56335">estimates</a> that real GDP contracted at a whopping 40% in Q2 of 2020, with the annual figure projected to be down 5.6%. </p>
+      <p>The lone bright spot has been a federal government that has shown the competence to act fast and with a heavy hand, largely learning from the experience of the 2008 Great Financial Crisis. Congress has <a href="https://www.imf.org/en/Topics/imf-and-covid19/Policy-Responses-to-COVID-19#U"> injected nearly $3 trillion </a> into the economy through various forms of coronavirus relief, and most likely, this massive stimulus was made possible by a combination of the Fed’s emergency rate cut on Sunday, March 15 and its subsequent actions to shore up credit markets. While correct directionally, the government’s actions thus far are probably not enough to replace the demand lost through lockdowns and the corresponding reverberations throughout the US labor and credit markets.<p>
+      <p>Yet one of the more peculiar observations at this point in the pandemic regards the behavior of the US housing market. Again, anchored by the experience of the 2008 Great Financial Crisis, many would have expected a severe drop in housing prices to add to the pain of the average American, who holds most of his or her wealth in home equity. Actually, housing is one more factor that reminds us that this crisis is different: according to Zillow’s home value index, the median home price in the US was up 4.1% year-over-year in April. Against the grim backdrop of sluggish real activity and poorly performing labor and credit markets, what gives?</p>
+      <p>The short answer is that it has to do with the supply side of the housing market, and unfortunately points to the conclusion that the pain is yet to come. Yes, demand is down given Americans are less financially secure than they were in previous months, but the sturdiness of home prices coupled with extremely low transaction volumes tells us that the supply of housing is dropping even more precipitously. </p>
+      <p>The charts below give a visual sense of what’s going on with the US housing supply, both in terms of existing homes and new deliveries. On one hand, Zillow’s monthly listings have continued their year-long downward trend through March, tracking down 9.5% for the most recently recorded twelve-month period. On the other, data from the US Census Bureau shows that housing permits, starts, and completions are down 19.2%, 29.7%, and 11.8% year-over-year respectively through April. These are staggering numbers, and market prices are signaling that they overshadow the corresponding drop in demand for housing. </p>
+
+      <div class="row">
+        <div class="column">
+          <img src="{% static 'blog/images/zillow_chart.png' %}" alt="Zillow Listings" style="width:100%">
+        </div>
+        <div class="column">
+          <a href="https://www.census.gov/construction/nrc/pdf/newresconst.pdf">
+            <img src="{% static 'blog/images/census_chart.png' %}" alt="Census new housing data" style="width:100%">
+          </a>
+        </div>
+      </div>
+
+      <br>
+      <p>Yet, it’s unlikely these trends will continue for much longer. Housing supply will inevitably recover in the latter part of the year as construction workers and homebuilders get back to work. But there is also substantial risk that the housing supply expands faster than demand, driven by a source we have yet seen come into play: foreclosures. <a href="https://www.zillow.com/research/daily-market-pulse-26666/">Data from Black Knight <a/> shows that the number of delinquent mortgages in the US more than doubled in April. This statistic is worrying but not shocking, especially when understood in the context of CARES Act <a href="https://www.consumerfinance.gov/coronavirus/mortgage-and-housing-assistance/mortgage-relief/">forebearance features </a> included in federally backed mortgages, which allow for something of a soft landing when it comes to Americans not being able to make their monthly payments. Basically, Congress mandated a grace period allowing homeowners to delay their mortgage payments without a penalty. But, these measures don't (and can't) last forever.</p>
+      <p>
+        The first of these forebearance features ends after a 180-day period that started March 18th, placing the first potential wave of foreclosures in mid-September. While many sectors of the real economy could be doing just fine by then, it’s conceivable that the recovery in retail, hospitality, and entertainment won’t be V-shaped. So where does that leave markets like Orlando and Las Vegas, whose economies are built on those sectors, and who had notably sharp rallies in housing prices leading up to the pandemic? What happens to the short-term rental (Airbnb) operators in those markets, who staked their futures and properties on a rent arbitrage opportunity that is now non-existent? The answer is probably forced selling through foreclosure processes that will resume once the dust settles and moratoriums are lifted. 
+        <img src="{% static 'blog/images/fredgraph.png' %}" align="right" style="width: 50%; padding-left: 1rem; padding-top: 1rem;">
+
+
+      </p>
+      <p>Economies that aren’t heavily skewed towards problem sectors like hospitality won’t be as adversely affected, but what happens to capital markets more broadly when the economies that are vulnerable face a sharp de-leveraging? What follow-on effects will there be if exposed regional banks go under? And ultimately, what happens to mortgage availability if Fannie and Freddie prove more vulnerable than we think? The nature and underlying cause of this economic crisis is most certainly different from 2008, but capital markets don’t work differently in any fundamental sense than they did then. In the absence of ongoing fiscal and monetary intervention, the same institutions that were put to the test in the Great Financial Crisis could be thrown the gauntlet once more.</p>
+      <p>We don’t have the answers to our questions yet, but there should be some clarity by Q4. It’s clear that risks for the US housing market are skewed to the downside, along with timetables for a successfully developed, tested, and mass-produced Covid-19 vaccine, which would appear to be the only panacea for the most vulnerable corners of the economy, including retail, hospitality, and entertainment. Until then, our best course of action appears to be to extend, pretend, and print (dollars).</p>
+
+      <p><i> Like this post? Follow <a href="https://twitter.com/InspectyHomes"> @InspectyHomes </a> on Twitter for more content</i></p>
+
+
+<!--         <blockquote class="blockquote">
+        <p class="mb-0">"What credentials should you look for? Who in your area has those credentials? How much should you pay for an inspection?"</p>
+        <footer class="blockquote-footer">Someone famous in
+          <cite title="Source Title">Source Title</cite>
+        </footer>
+      </blockquote> -->
+
+      <hr>
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5">
+    <div class="container">
+      <p class="m-0 text-center">&copy; RBCo 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
