@@ -7,6 +7,10 @@
 	}
 }
 
+.masthead-brand {
+	margin-left: 15.7rem;
+}
+
 .container {
 	max-width: 900px;
 }
@@ -15,7 +19,9 @@
 
 /*header*/
 .masthead {
+  margin-bottom: 0rem;
   margin-top: 1rem;
+  margin-right: -1.75rem;
 }
 
 .nav-masthead .nav-link {
@@ -31,7 +37,7 @@
   border-bottom-color: gray;
 }
 
-.nav-link + .nav-link {
+.nav-masthead .nav-link + .nav-link {
   margin-left: 1rem;
 }
 
@@ -50,9 +56,33 @@
 .heading {
 	text-align: center;
 	padding-bottom: 2rem;
-	margin-top: -6rem;
+	margin-top: -3rem;
 }
 
-.move_up {
-	margin-top: -3rem;
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+figure {
+  display: inline-block;
+  margin: 20px;
+}
+
+figure img {
+  vertical-align: top;
+  width: 80%;
+}
+
+figcaption {
+  width: 80%;
 }

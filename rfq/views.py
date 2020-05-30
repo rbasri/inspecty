@@ -60,7 +60,7 @@ def quoted(request):
 	
 	quote.getPrice(sqft=sqft, year_built=yr_built, home_value=home_value, unit_type=unit_type)
 	quote.save()
-	#send_mail('New quote from ' + email, str(quote), EMAIL_HOST_USER, [EMAIL_HOST_USER])
+	send_mail('New quote from ' + email, str(quote), EMAIL_HOST_USER, [EMAIL_HOST_USER])
 
 	return render(request, 'rfq/quoted.html', {
 		'quote': quote,
@@ -76,7 +76,7 @@ def record(request):
 
 	quote = get_object_or_404(Quote, pk=quote_id)
 
-	#send_mail('New request to schedule inspection', 'Quote ID = ' + str(quote_id), EMAIL_HOST_USER, [EMAIL_HOST_USER])
+	send_mail('New request to schedule inspection', 'Quote ID = ' + str(quote_id), EMAIL_HOST_USER, [EMAIL_HOST_USER])
 	quote.scheduled=True
 	quote.save()
 	return render(request, 'rfq/record.html')
