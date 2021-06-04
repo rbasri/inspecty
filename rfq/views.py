@@ -40,7 +40,7 @@ def quoted(request):
 	# endpoint = 'https://sandbox.estated.com/v4/property?' #sandbox
 	endpoint = 'https://apis.estated.com/v4/property?' #production
 	# token = 'HrKD9Ef6Rot4Yb9rxeDAfZdWKCiofs' #sandbox
-	token = 'WoflkXOZCHzq7g2j77y2W9B8UrGCXh' #production
+	token = '' #production
 	endpoint += 'token=' + token + '&combined_address='
 
 
